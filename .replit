@@ -8,6 +8,9 @@ function getTime(seconds) {
   //We are receiving time in seconds, and firstly we want to convert this to minutes
 
   //Rule for converting to minutes:
+  let minutes = seconds / 60;
+  
+  return minutes;
 
   //We result with the time in minutes and we want to round up to the nearest 5 minutes
 
