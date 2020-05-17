@@ -9,10 +9,19 @@ function getTime(seconds) {
 
   //Rule for converting to minutes:
   let minutes = seconds / 60;
-  
-  return minutes;
+
 
   //We result with the time in minutes and we want to round up to the nearest 5 minutes
+
+  function roundNearestFive(min) {
+  let m = minutes + 2.5;
+  let n = m / 5;
+  let o = Math.round(n);
+  let roundedMin = o * 5;
+  return roundedMin;
+}
+
+return roundNearestFive(minutes);
 
   //Rule for round up:
 
