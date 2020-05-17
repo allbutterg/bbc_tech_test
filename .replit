@@ -1,4 +1,4 @@
-language = "undefined"
+language = "javascript"
 run = ""
 
 //Here is a function that rounds up time given in seconds, up to the nearest 5 minutes
