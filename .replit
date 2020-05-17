@@ -1,0 +1,19 @@
+language = "undefined"
+run = ""
+
+//Here is a function that rounds up time given in seconds, up to the nearest 5 minutes
+
+function getTime(seconds) {
+
+  //We are receiving time in seconds, and firstly we want to convert this to minutes
+
+  //Rule for converting to minutes:
+
+  //We result with the time in minutes and we want to round up to the nearest 5 minutes
+
+  //Rule for round up:
+
+return seconds;
+}
+
+getTime(442)
