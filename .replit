@@ -7,7 +7,6 @@ function getTime(seconds) {
 
   //We are receiving time in seconds, and firstly we want to convert this to minutes
 
-  //Rule for converting to minutes:
   let minutes = seconds / 60;
 
   //We result with the time in minutes and we want to round up to the nearest 5 minutes
@@ -17,15 +16,21 @@ function getTime(seconds) {
   //We also need to handle scenarios where an input of '0' seconds won't round up to 5 minutes, but will return 0 minutes. For this, we are changing 2.5 to 2.49 which gives a threshold that 'mostly' satisfies this, up to 0.5 seconds.
 
   function roundNearestFive(min) {
-  let m = minutes + 2.49;
+  if (minutes > 0) {
+  let m = minutes + 2.5;
   let n = m / 5;
   let o = Math.round(n);
   let roundedMin = o * 5;
-  return roundedMin;}
+  return roundedMin;
+    } else {
+      return 0;
+    }
+  }
+
 
 //Retreive the absolute number, rounded up to the nearest five
-let rounded = roundNearestFive(minutes)
 
+let rounded = roundNearestFive(minutes)
 
 //Now we want to translate this result into a sensical string which describes it as a number of minutes:
 
@@ -35,4 +40,4 @@ return roundedSentence;
 return seconds;
 }
 
-getTime(0.5)
+getTime(442)
