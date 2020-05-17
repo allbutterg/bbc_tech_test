@@ -13,6 +13,8 @@ function getTime(seconds) {
 
   //We result with the time in minutes and we want to round up to the nearest 5 minutes
 
+  //Given there is no in-built function in JS to round to a nearest specified minute AND to always round up, we have to create our own logic. This can be accessed through our own following function, ‘roundNearestFive’:
+
   function roundNearestFive(min) {
   let m = minutes + 2.5;
   let n = m / 5;
@@ -21,10 +23,14 @@ function getTime(seconds) {
   return roundedMin;
 }
 
-return roundNearestFive(minutes);
+//Retreive the absolute number, rounded up to the nearest five
+let rounded = roundNearestFive(minutes)
 
-  //Rule for round up:
+//Now we want to translate this result into a sensical string which describes it as a number of minutes:
 
+let roundedSentence = rounded.toString() + " minutes";
+
+return roundedSentence;
 return seconds;
 }
 
